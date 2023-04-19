@@ -1,0 +1,15 @@
+8 I
+E 3 E 2 E 1 P D P D P
+18 I
+E 1 E 2 E 4 E 3 E 5 E 8 P D P D P D P D P D P D
+9 I
+P E 1 E 5 E 9 P D P D P
+14 I
+E 1 P E 3 P E 5 P E 8 P D P D P D P
+8 C
+E e E a E g P D P D P
+17 C
+E e E b E e E b E a E a P D P D P D P D P D P
+0
+
+
