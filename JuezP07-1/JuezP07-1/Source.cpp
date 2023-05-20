@@ -29,8 +29,9 @@ public:
 
     T minimo() {
         if (!stk.empty()) {
+            // Utiliza un variable para recordar el valor mínimo
             int min = stk.top();
-            while (!stk.empty()) {
+            while (!stk.empty()) { // Recorrer todos los valores
                 int top = stk.top();
                 min = min < top ? min : top;
                 aux.push(top);

@@ -10,8 +10,8 @@ public:
     stack(){}
 
     void pop() {
-        if (!stk.empty()) {
-            if (stk.top() == aux.top())
+        if (!stk.empty()) { // Si la pila no es vacía
+            if (stk.top() == aux.top()) // Si el elemento es el valor mínimo de la pila
                 aux.pop();
 
             return stk.pop();
@@ -21,6 +21,7 @@ public:
     }
 
     void push(T elem) {
+        // Si el elemento que va a poner es el valor mínimo de la pila actual
         if (aux.empty() || elem <= aux.top())
             aux.push(elem);
 
@@ -35,6 +36,7 @@ public:
     }
 
     T minimo() {
+        // El valor mínimo es la arriba de la pila auxiliar
         if (!aux.empty())
             return aux.top();
 

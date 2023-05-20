@@ -6,17 +6,16 @@
 #include <iomanip>
 #include <fstream>
 #include <vector>
-#include "hashmap_eda.h"
-
+#include <unordered_map>
 
 // función que resuelve el problema
-int resolver(const unordered_map<int, std::vector<int>>& map, int caso, int numero) {
+int resolver(const std::unordered_map<int, std::vector<int>>& map, int caso, int numero) {
     auto it = map.find(numero);
 
-    if (it == map.end() || it->valor.size() < caso)
+    if (it == map.end() || it->second.size() < caso)
         return -1;
 
-    return it->valor[caso - 1];
+    return it->second[caso - 1];
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -29,7 +28,7 @@ bool resuelveCaso() {
     if (!std::cin)
         return false;
 
-    unordered_map<int, std::vector<int>> map;
+    std::unordered_map<int, std::vector<int>> map;
     for (int i = 1; i <= numLista; i++) {
         int x;
         std::cin >> x;
@@ -38,7 +37,7 @@ bool resuelveCaso() {
             map.insert({ x, {i} });
         }
         else {
-            it->valor.push_back(i);
+            it->second.push_back(i);
         }
     }
 
